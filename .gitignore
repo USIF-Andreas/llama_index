@@ -13,3 +13,4 @@ data/mysql/
 *.ndbmeta
 *.ndbtable
 .env
+data/google/*.json
