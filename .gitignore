@@ -1,0 +1,14 @@
+data/mysql/
+*.dblwr
+*.ibd
+*.frm
+*.log
+*.myd
+*.myi
+*.ndb
+*.ndbdata
+*.ndberror
+*.ndbinfo
+*.ndblog
+*.ndbmeta
+*.ndbtable

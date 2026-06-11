@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+:root {
+  font-family: "Space Grotesk", sans-serif;
+  color-scheme: light;
+  --ink: #0a0b12;
+  --muted: #56607a;
+  --accent: #ff7a00;
+  --accent-dark: #e35b00;
+  --surface: #f6f4ef;
+  --surface-2: #ffffff;
+  --edge: #e6e1d6;
+  --shadow: 0 30px 60px rgba(11, 15, 33, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #fff2d7, #efe6ff 40%, #f4f9ff 70%);
+  color: var(--ink);
+}
+
+.app {
+  min-height: 100vh;
+  padding: 48px 6vw 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 4vw, 4.3rem);
+  margin: 0 0 16px;
+}
+
+.subhead {
+  max-width: 560px;
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.hero-card {
+  background: var(--surface-2);
+  border-radius: 20px;
+  padding: 24px 28px;
+  min-width: 260px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--edge);
+}
+
+.hero-card h3 {
+  margin: 0 0 16px;
+}
+
+.pulse-line {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.panel {
+  background: var(--surface-2);
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid var(--edge);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: liftIn 0.7s ease;
+}
+
+.panel h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.panel-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--edge);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.primary:disabled {
+  background: #f0b277;
+  cursor: not-allowed;
+}
+
+.primary:not(:disabled):hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.ghost {
+  border: 1px solid var(--edge);
+  background: transparent;
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.toggle {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.mysql-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.answer {
+  background: var(--surface);
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px dashed var(--edge);
+}
+
+.answer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.tag {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  background: #111827;
+  color: #fff;
+  border-radius: 999px;
+}
+
+.sources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.source-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.source-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--edge);
+}
+
+.source-text {
+  margin: 0 0 8px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.source-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes liftIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .app {
+    padding: 32px 5vw 48px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
